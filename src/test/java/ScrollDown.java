@@ -1,0 +1,14 @@
+import io.appium.java_client.AppiumBy;
+import org.testng.annotations.Test;
+
+public class ScrollDown extends BaseClass{
+
+    @Test
+    public void ScrollMethod(){
+        driver.findElement(AppiumBy.accessibilityId("Views")).click();
+
+        // Scroll in Appium//
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text" +
+                "(\"TextSwitcher\"));")).click();
+    }
+}
